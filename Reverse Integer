@@ -1,0 +1,24 @@
+class Solution {
+    public static int reverse(int x){
+        StringBuilder sb = new StringBuilder("");
+        if (x < 0) {
+            x=-x;
+            System.out.println(x);
+            sb = sb.append(x).append("-").reverse();
+        }
+        else
+            sb = sb.append(x).reverse();
+        
+        try {
+            int y = Integer.parseInt(sb.toString());
+            return y;
+        }
+        catch(Exception Overflow) {
+            System.out.println("error: overflow");
+            return 0;
+        }
+        //System.out.println(y);
+        
+        
+    }
+}
