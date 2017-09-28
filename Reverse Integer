@@ -1,9 +1,9 @@
 class Solution {
     public static int reverse(int x){
-        StringBuilder sb = new StringBuilder("");
+        StringBuilder sb = new StringBuilder();
         if (x < 0) {
             x=-x;
-            System.out.println(x);
+            //System.out.println(x);
             sb = sb.append(x).append("-").reverse();
         }
         else
@@ -14,7 +14,7 @@ class Solution {
             return y;
         }
         catch(Exception Overflow) {
-            System.out.println("error: overflow");
+            //System.out.println("error: overflow");
             return 0;
         }
         //System.out.println(y);
