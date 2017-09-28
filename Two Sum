@@ -1,0 +1,16 @@
+class Solution {
+    public static int[] twoSum(int[] nums, int target) {
+        int[] solution = new int[2];
+OUT:        for(int x=0;x<nums.length;x++){
+            for (int y=1;y<nums.length;y++){
+                if (x!=y && nums[x]+nums[y] == target){
+                    solution[0] = x;
+                    solution[1] = y;
+                    break OUT;
+                }
+            }
+        }
+        System.out.println(solution[0] + " " + solution[1]);
+        return solution;
+    }
+}
